@@ -20,15 +20,17 @@ function mediumGrid(a){
 
 let slider = document.getElementById('myRange');
 let output = document.getElementById('demo');
-let gridSize = 50;
+let gridSize = 50;    
+mediumGrid(gridSize)
+
 
 output.innerHTML = slider.value + ' ' + 'x' + ' ' + slider.value; // Display the default slider value// Update the current slider value
 
 slider.oninput = function gridScale() {
-output.innerHTML = this.value + ' ' + 'x' + ' ' + this.value;
-gridSize = this.value
-console.log(gridSize)
-mediumGrid(gridSize)
+    output.innerHTML = this.value + ' ' + 'x' + ' ' + this.value;
+    gridSize = this.value
+    console.log(gridSize)
+    mediumGrid(gridSize)
 };
 
 
